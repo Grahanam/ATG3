@@ -183,7 +183,7 @@ router.post('/forgotpass',async(req,res)=>{
 router.post('/resetpassword',async(req,res)=>{
   try{
       const {password,id,token}=req.body
-      if(!password||!id||token)return res.status(400).send({message:"password/id/token-field missing?"})
+      if(!password||!id||!token)return res.status(400).send({message:"password/id/token-field missing?"})
         //check form fields
       
       //check token in database
